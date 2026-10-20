@@ -1,0 +1,235 @@
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+main {
+  text-align: justify;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header fixe */
+header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ccc;
+  position: sticky;
+  top: 0;
+  background-color: #f2f2f2;
+  z-index: 101;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f2f2f2;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+header h1 {
+  margin: 0;
+  color: #0d3b66;
+}
+
+header .title {
+  margin: 5px 0 0 0;
+  color: #555;
+}
+
+/* Menu dynamique fixe */
+.menu {
+  display: flex;
+  gap: 15px;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ccc;
+  position: sticky;
+  top: 100px;
+  background-color: #f2f2f2;
+  z-index: 100;
+}
+
+.menu a {
+  color: #0d3b66;
+  font-weight: 600;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.menu a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #0d3b66;
+  transition: width 0.3s;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+}
+
+.menu a:hover {
+  color: #064273;
+}
+
+.menu a:hover::after {
+  width: 100%;
+}
+
+/* Smooth scroll et sections */
+html {
+  scroll-behavior: smooth;
+}
+
+main section {
+  margin-bottom: 30px;
+  scroll-margin-top: 150px;
+}
+
+h2 {
+  color: #0d3b66;
+  margin-bottom: 10px;
+}
+
+article {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+article h3 {
+  margin: 0 0 5px 0;
+}
+
+article .company {
+  font-size: 0.9em;
+  color: #555;
+}
+
+ul {
+  margin: 10px 0 0 20px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.9em;
+  color: #777;
+}
+
+/* Back to top */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: rgba(13, 59, 102, 0.7); /* légèrement transparent */
+  color: white;
+  padding: 10px 15px;
+  border-radius: 50%;
+  font-size: 18px;
+  text-decoration: none;
+  display: none;
+  z-index: 200;
+  transition: background 0.3s, opacity 0.3s;
+}
+
+.back-to-top:hover {
+  background-color: rgba(6, 66, 115, 1);
+  opacity: 1;
+}
+
+/* Formulaire de contact */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 600px;
+}
+
+form label {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+form input, form textarea {
+  padding: 10px 15px; /* 10px vertical, 15px horizontal */
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box; /* pour que le padding n'agrandisse pas la largeur */
+}
+
+form button {
+  width: 150px;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background-color: #0d3b66;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background-color: #064273;
+}
+
+.download-cv {
+  margin: 20px 0;
+}
+
+.download-cv a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0d3b66;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s;
+  margin-right: 10px; /* espace entre bouton et légende si côte à côte */
+}
+
+.download-cv a:hover {
+  background-color: #064273;
+}
+
+/* Effet au survol */
+.download-cv a:hover {
+  background-color: #3a6ea5; /* bleu plus clair */
+  color: white;              /* texte reste blanc */
+  }
+
+.download-cv .download-note {
+  font-size: 0.85em;      /* plus petit que le texte normal */
+  color: #555;            /* gris léger */
+  margin-top: 5px;        /* petit espace sous le bouton */
+}
